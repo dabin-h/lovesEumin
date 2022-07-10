@@ -45,6 +45,41 @@
 			font-weight:normal;
 		}
 
+		#my_modal {
+			display: none;
+			position:relative;
+			width:100%;
+			height:100%;
+			z-index:1;
+		}
+
+		#my_modal h2 {
+			margin:0;
+		}
+
+		#my_modal button {
+			display:inline-block;
+			width:50px;
+			margin-left:calc(100% - 50px - 10px);
+		}
+
+		#my_modal .modal_content {
+			width:300px;
+			margin:100px auto;
+			padding:20px 10px;
+			background:#fff;
+			border:2px solid #666;
+		}
+
+		#my_modal .modal_layer {
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background:rgba(0, 0, 0, 0.5);
+			z-index:-1;
+		}
 	</style>
 
 	<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">-->
@@ -78,7 +113,7 @@
 
 <div class="qbootstrap-hero" data-section="home">
 	<div class="qbootstrap-overlay"></div>
-	<div class="qbootstrap-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/photo/LJD_0528.jpg);">
+	<div class="qbootstrap-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/photo/LJD_0001.jpg);">
 		<div class="display-t">
 			<div class="display-tc" style="vertical-align: bottom;">
 				<div class="container">
@@ -120,8 +155,8 @@
 			<div class="col-md-8 col-md-offset-2 animate-box">
 				<div class="col-md-12 text-center section-heading svg-sm colored">
 					<p style="font-size: 14px; margin-top: 20px; margin-bottom: 20px">
-						허민봉, 이경숙의 아들 허다빈<br/>
-						김용범, 곽명애의 딸 김유민
+						허민봉, 이경숙의 아들 다빈<br/>
+						김용범, 곽명애의 딸 유민
 					</p>
 				</div>
 			</div>
@@ -165,78 +200,113 @@
 							더채플앳청담 주차장 이용 - 1시간 30분 무료
 						</p>
 						<div id="map" style="height:360px; margin-top: 20px; margin-bottom: 20px;"></div>
+
+
+
+						<div class="date">
+							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">마음을 전해주실 곳</span>
+						</div>
+
+						<div id="my_modal">
+							<div class="modal_content">
+								<p id="accountInfo" style="text-align: left; font-size: 13px;"></p>
+								</p>
+
+								<button type="button" id="modal_close_btn"><p style="text-align: center; font-size: 15px; margin: auto">닫기</p></button>
+							</div>
+							<div class="modal_layer"></div>
+						</div>
+
+						<div id="root">
+							<button id="modal_opne_btn_man"> <p style="text-align: center; font-size: 15px; margin: auto">신랑측 계좌번호</p></button>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<button id="modal_opne_btn_woman"><p style="text-align: center; font-size: 15px; margin: auto">신부측 계좌번호</p></button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-
 <div id="qbootstrap-gallery" data-section="gallery" style="padding: 0;">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-3 col-sm-6">
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/photo/LJD_0006.jpg">
-						<img src="images/photo/LJD_0006.jpg" class="img-responsive" >
+					<a class="gallery-img image-popup" href="images/photo/LJD_001.jpg">
+						<img src="images/photo/LJD_001.jpg" class="img-responsive" >
 					</a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/photo/LJD_0119.jpg">
-						<img src="images/photo/LJD_0119.jpg" class="img-responsive" >
-					</a>
-				</div>
-				<div class="gallery animate-box">
-					<a class="gallery-img image-popup image-popup" href="images/photo/LJD_0149.jpg">
-						<img src="images/photo/LJD_0149.jpg" class="img-responsive" >
+					<a class="gallery-img image-popup image-popup" href="images/photo/LJD_003.jpg">
+						<img src="images/photo/LJD_003.jpg" class="img-responsive" >
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6">
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/photo/LJD_0242.jpg">
-						<img src="images/photo/LJD_0242.jpg" class="img-responsive" >
+					<a class="gallery-img image-popup" href="images/photo/LJD_004.jpg">
+						<img src="images/photo/LJD_004.jpg" class="img-responsive" >
 					</a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/photo/LJD_0353.jpg">
-						<img src="images/photo/LJD_0353.jpg" class="img-responsive" >
-					</a>
-				</div>
-				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/photo/LJD_0387.jpg">
-						<img src="images/photo/LJD_0387.jpg" class="img-responsive" >
-					</a>
-				</div>
-				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/photo/LJD_0682.jpg">
-						<img src="images/photo/LJD_0682.jpg" class="img-responsive" >
+					<a class="gallery-img image-popup" href="images/photo/LJD_005.jpg">
+						<img src="images/photo/LJD_005.jpg" class="img-responsive" >
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-6">
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/photo/LJD_0779.jpg">
-						<img src="images/photo/LJD_0779.jpg" class="img-responsive" >
+					<a class="gallery-img image-popup" href="images/photo/LJD_008.jpg">
+						<img src="images/photo/LJD_008.jpg" class="img-responsive" >
 					</a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/photo/LJD_0848.jpg">
-						<img src="images/photo/LJD_0848.jpg" class="img-responsive" >
+					<a class="gallery-img image-popup" href="images/photo/LJD_009.jpg">
+						<img src="images/photo/LJD_009.jpg" class="img-responsive" >
 					</a>
 				</div>
+				<div class="gallery animate-box">
+					<a class="gallery-img image-popup" href="images/photo/LJD_010.jpg">
+						<img src="images/photo/LJD_010.jpg" class="img-responsive" >
+					</a>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="gallery animate-box">
+					<a class="gallery-img image-popup" href="images/photo/LJD_011.jpg">
+						<img src="images/photo/LJD_011.jpg" class="img-responsive" >
+					</a>
+				</div>
+				<div class="gallery animate-box">
+					<a class="gallery-img image-popup" href="images/photo/LJD_013.jpg">
+						<img src="images/photo/LJD_013.jpg" class="img-responsive" >
+					</a>
+				</div>
+			</div>
 
-			</div>
 			<div class="col-md-3 col-sm-6">
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/photo/LJD_0977.jpg">
-						<img src="images/photo/LJD_0977.jpg" class="img-responsive" >
+					<a class="gallery-img image-popup" href="images/photo/LJD_014.jpg">
+						<img src="images/photo/LJD_014.jpg" class="img-responsive" >
 					</a>
 				</div>
 				<div class="gallery animate-box">
-					<a class="gallery-img image-popup" href="images/photo/LJD_0966.jpg">
-						<img src="images/photo/LJD_0966.jpg" class="img-responsive" >
+					<a class="gallery-img image-popup" href="images/photo/LJD_015.jpg">
+						<img src="images/photo/LJD_015.jpg" class="img-responsive" >
+					</a>
+				</div>
+				<div class="gallery animate-box">
+					<a class="gallery-img image-popup" href="images/photo/LJD_016.jpg">
+						<img src="images/photo/LJD_016.jpg" class="img-responsive" >
+					</a>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="gallery animate-box">
+					<a class="gallery-img image-popup" href="images/photo/LJD_21.jpg">
+						<img src="images/photo/LJD_21.jpg" class="img-responsive" >
 					</a>
 				</div>
 			</div>
@@ -244,7 +314,7 @@
 	</div>
 </div>
 
-<div id="qbootstrap-countdown" style="padding: 7em 0;background-image: url(images/photo/LJD_0833-1.jpg); background-position: center" data-section="wedding-day">
+<div id="qbootstrap-countdown" style="padding: 7em 0;background-image: url(images/photo/LJD_20.jpg); background-position: center" data-section="wedding-day">
 	<div class="overlay"></div>
 	<div class="display-over">
 		<div class="container">
@@ -303,49 +373,63 @@
 <script src="js/main.js?v=20180722"></script>
 <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=dd7abcdfdbda70f9c5f6f168e3d89683"></script>
 <script>
-  var container = document.getElementById('map');
-  var options = {
-    center: new daum.maps.LatLng(37.522211214480755, 127.03900938195554),
-    level: 3
-  };
+  // var container = document.getElementById('map');
+  // var options = {
+  //   center: new daum.maps.LatLng(37.522211214480755, 127.03900938195554),
+  //   level: 3
+  // };
+  //
+  // var map = new daum.maps.Map(container, options);
+  //
+  // //map.setDraggable(false);
+  //
+  // var positions = [
+  //   {
+  //     title: '더채플앳청담 채플홀',
+  //     latlng: new daum.maps.LatLng(37.522211214480755, 127.03900938195554),
+  //     link: "https://place.map.kakao.com/23182563"
+  //   },
+  //   {
+  //     title: '셔틀버스',
+  //     latlng: new daum.maps.LatLng(37.517435739825444, 127.03948650744927),
+  //     link: "https://place.map.kakao.com/17491734"
+  //   }
+  // ];
+  //
+  // for (var i = 0; i < positions.length; i ++) {
+  //
+  //   // 마커를 생성합니다
+  //   var marker = new daum.maps.Marker({
+  //     position: positions[i].latlng
+  //   });
+  //
+  //   marker.setMap(map);
+  //
+  //   var iwContent = '<a style="padding: 5px; font:14px/2 sans-serif; text-decoration: underline;" target="_blank" href="' + positions[i].link +'"><strong>' + positions[i].title  + '</strong></a>',
+  //       iwPosition = positions[i].latlng
+  //
+  //
+  //   var infowindow = new daum.maps.InfoWindow({
+  //     position: iwPosition, // 마커를 표시할 위치
+  //     content : iwContent, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+  //   });
+  //
+  //   infowindow.open(map, marker);
+  //
+  // }
 
-  var map = new daum.maps.Map(container, options);
+  document.getElementById("modal_opne_btn_man").onclick = function() {
+	  document.getElementById("accountInfo").innerHTML="신랑 허다빈 : 국민은행 97760536859 <br/>혼주 허민봉: 기업은행 062-068275-01-014 <br/>혼주 이경숙 : 하나은행 219-910244-07107"
+	  document.getElementById("my_modal").style.display="block";
+  }
 
-  //map.setDraggable(false);
+  document.getElementById("modal_close_btn").onclick = function() {
+	  document.getElementById("my_modal").style.display="none";
+  }
 
-  var positions = [
-    {
-      title: '더채플앳청담 채플홀',
-      latlng: new daum.maps.LatLng(37.522211214480755, 127.03900938195554),
-      link: "https://place.map.kakao.com/23182563"
-    },
-    {
-      title: '셔틀버스',
-      latlng: new daum.maps.LatLng(37.517435739825444, 127.03948650744927),
-      link: "https://place.map.kakao.com/17491734"
-    }
-  ];
-
-  for (var i = 0; i < positions.length; i ++) {
-
-    // 마커를 생성합니다
-    var marker = new daum.maps.Marker({
-      position: positions[i].latlng
-    });
-
-    marker.setMap(map);
-
-    var iwContent = '<a style="padding: 5px; font:14px/2 sans-serif; text-decoration: underline;" target="_blank" href="' + positions[i].link +'"><strong>' + positions[i].title  + '</strong></a>',
-        iwPosition = positions[i].latlng
-
-
-    var infowindow = new daum.maps.InfoWindow({
-      position: iwPosition, // 마커를 표시할 위치
-      content : iwContent, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-    });
-
-    infowindow.open(map, marker);
-
+  document.getElementById("modal_opne_btn_woman").onclick = function() {
+	  document.getElementById("accountInfo").innerHTML="신부 김유민 : 국민은행 016-702-04-601750 <br/>혼주 김용범 : 기업은행 062-068275-01-014 <br/>혼주 곽명애 : 기업은행 133-147190-01-015 <br/>"
+	  document.getElementById("my_modal").style.display="block";
   }
 
 </script>

@@ -64,7 +64,7 @@
 		}
 
 		#my_modal .modal_content {
-			width:300px;
+			width:100%;
 			margin:100px auto;
 			padding:20px 10px;
 			background:#fff;
@@ -212,14 +212,14 @@
 								<p id="accountInfo" style="text-align: left; font-size: 13px;"></p>
 								</p>
 
-								<button type="button" id="modal_close_btn"><p style="text-align: center; font-size: 15px; margin: auto">닫기</p></button>
+								<button type="button" id="modal_close_btn"><p style="text-align: center; font-size: 13px; margin: auto">닫기</p></button>
 							</div>
 							<div class="modal_layer"></div>
 						</div>
 
 						<div id="root">
 							<button id="modal_opne_btn_man"> <p style="text-align: center; font-size: 15px; margin: auto">신랑측 계좌번호</p></button>
-							&nbsp;&nbsp;&nbsp;&nbsp;
+
 							<button id="modal_opne_btn_woman"><p style="text-align: center; font-size: 15px; margin: auto">신부측 계좌번호</p></button>
 						</div>
 					</div>
@@ -373,53 +373,53 @@
 <script src="js/main.js?v=20180722"></script>
 <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=dd7abcdfdbda70f9c5f6f168e3d89683"></script>
 <script>
-  // var container = document.getElementById('map');
-  // var options = {
-  //   center: new daum.maps.LatLng(37.522211214480755, 127.03900938195554),
-  //   level: 3
-  // };
-  //
-  // var map = new daum.maps.Map(container, options);
-  //
-  // //map.setDraggable(false);
-  //
-  // var positions = [
-  //   {
-  //     title: '더채플앳청담 채플홀',
-  //     latlng: new daum.maps.LatLng(37.522211214480755, 127.03900938195554),
-  //     link: "https://place.map.kakao.com/23182563"
-  //   },
-  //   {
-  //     title: '셔틀버스',
-  //     latlng: new daum.maps.LatLng(37.517435739825444, 127.03948650744927),
-  //     link: "https://place.map.kakao.com/17491734"
-  //   }
-  // ];
-  //
-  // for (var i = 0; i < positions.length; i ++) {
-  //
-  //   // 마커를 생성합니다
-  //   var marker = new daum.maps.Marker({
-  //     position: positions[i].latlng
-  //   });
-  //
-  //   marker.setMap(map);
-  //
-  //   var iwContent = '<a style="padding: 5px; font:14px/2 sans-serif; text-decoration: underline;" target="_blank" href="' + positions[i].link +'"><strong>' + positions[i].title  + '</strong></a>',
-  //       iwPosition = positions[i].latlng
-  //
-  //
-  //   var infowindow = new daum.maps.InfoWindow({
-  //     position: iwPosition, // 마커를 표시할 위치
-  //     content : iwContent, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-  //   });
-  //
-  //   infowindow.open(map, marker);
-  //
-  // }
+  var container = document.getElementById('map');
+  var options = {
+    center: new daum.maps.LatLng(37.522211214480755, 127.03900938195554),
+    level: 3
+  };
+
+  var map = new daum.maps.Map(container, options);
+
+  //map.setDraggable(false);
+
+  var positions = [
+    {
+      title: '더채플앳청담 채플홀',
+      latlng: new daum.maps.LatLng(37.522211214480755, 127.03900938195554),
+      link: "https://place.map.kakao.com/23182563"
+    },
+    {
+      title: '셔틀버스',
+      latlng: new daum.maps.LatLng(37.517435739825444, 127.03948650744927),
+      link: "https://place.map.kakao.com/17491734"
+    }
+  ];
+
+  for (var i = 0; i < positions.length; i ++) {
+
+    // 마커를 생성합니다
+    var marker = new daum.maps.Marker({
+      position: positions[i].latlng
+    });
+
+    marker.setMap(map);
+
+    var iwContent = '<a style="padding: 5px; font:14px/2 sans-serif; text-decoration: underline;" target="_blank" href="' + positions[i].link +'"><strong>' + positions[i].title  + '</strong></a>',
+        iwPosition = positions[i].latlng
+
+
+    var infowindow = new daum.maps.InfoWindow({
+      position: iwPosition, // 마커를 표시할 위치
+      content : iwContent, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+    });
+
+    infowindow.open(map, marker);
+
+  }
 
   document.getElementById("modal_opne_btn_man").onclick = function() {
-	  document.getElementById("accountInfo").innerHTML="신랑 허다빈 : 국민은행 97760536859 <br/>혼주 허민봉: 기업은행 062-068275-01-014 <br/>혼주 이경숙 : 하나은행 219-910244-07107"
+	  document.getElementById("accountInfo").innerHTML="신랑 허다빈 <br/>국민은행 97760536859 <br/><br/>혼주 허민봉<br/>기업은행 062-068275-01-014<br/><br/>혼주 이경숙<br/>하나은행 219-910244-07107"
 	  document.getElementById("my_modal").style.display="block";
   }
 
@@ -428,7 +428,7 @@
   }
 
   document.getElementById("modal_opne_btn_woman").onclick = function() {
-	  document.getElementById("accountInfo").innerHTML="신부 김유민 : 국민은행 016-702-04-601750 <br/>혼주 김용범 : 기업은행 062-068275-01-014 <br/>혼주 곽명애 : 기업은행 133-147190-01-015 <br/>"
+	  document.getElementById("accountInfo").innerHTML="신부 김유민<br/>국민은행 016-702-04-601750 <br/><br/>혼주 김용범<br/>기업은행 062-068275-01-014<br/><br/>혼주 곽명애<br/>기업은행 133-147190-01-015 <br/>"
 	  document.getElementById("my_modal").style.display="block";
   }
 
